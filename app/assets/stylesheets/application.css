@@ -205,7 +205,7 @@ table {
 
 .wrapper {
   margin: 100px;
-  margin-top: 40px;
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
