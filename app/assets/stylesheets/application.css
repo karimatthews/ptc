@@ -202,7 +202,7 @@ table {
 
 .wrapper {
   margin: 100px;
-  margin-top: 20px;
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
