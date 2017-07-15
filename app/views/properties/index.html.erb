@@ -8,10 +8,10 @@
 
 
 <div class = 'properties'>
-  <% @properties.each do |property| %>
+  <% @properties.each_with_index do |property, i| %>
     <%= link_to property do %>
       <div class = 'properties__block'>
-        <img src = "assets/house.jpg" class = 'image'>
+        <img src = "<%= "assets/house#{i}.jpg" %>" class = 'image'>
         <span class = 'properties__price'> $<%= property.price %> </span>
       </div>
       <div class = 'properties__address'>
