@@ -68,7 +68,7 @@
 \*------------------------------------*/
 
 body {
-  background-color: #C5C1C0;
+  background-color: #DFDBDA;
   color: black;
   margin: 0;
   font-family: verdana, arial, helvetica, sans-serif;
@@ -145,6 +145,31 @@ label {
   display: block;
 }
 
+img {
+  width: 300px;
+  height: 250px;
+}
+
+
+
+/*------------------------------------*\
+# image
+\*------------------------------------*/
+
+.image {
+  width: 300px;
+  height: 150px;
+  z-index: 11;
+}
+
+.image__logo {
+  width: 60px;
+  height: 60px;
+  margin-left: 100px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
 
 /*------------------------------------*\
 #wrapper
@@ -186,12 +211,19 @@ label {
 \*------------------------------------*/
 
 .btn {
-  width: 150px;
+  font-size: 1em;
+  width: fit-content;
+  height: 40px;;
   padding: 4px;
-  background-color: #E7DFDD;
+  background-color: white;
   color: #0E0B16;
   cursor: pointer;
+  width: 150px;
+  padding: 4px;
+  border-radius: 5px;
 }
+
+
 
 
 
@@ -237,6 +269,47 @@ label {
 }
 
 
+
+
+
+
+/*------------------------------------*\
+# properties
+\*------------------------------------*/
+
+.properties {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  width: 100%;
+}
+
+.properties__block {
+  display: flex;
+  margin: 60px;
+  margin-left: 0;
+  margin-bottom: 0;
+  width: 300px;
+  height: 250: none;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.properties__address {
+  margin-top: 0;
+  padding-top: 20px;
+  padding-left: 10px;
+}
+
+.properties__price {
+  background: none;
+  margin-right: 10px;
+  margin-top:10px;
+  margin-left: auto;
+  z-index: 10;
+  position: absolute;
+}
 
 
 

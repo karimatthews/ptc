@@ -2,7 +2,28 @@
 
 <h1>Properties</h1>
 
-<table>
+<button class = 'btn'>
+  <%= link_to 'New Property', new_property_path %>
+</button>
+
+
+<div class = 'properties'>
+  <% @properties.each do |property| %>
+    <%= link_to property do %>
+      <div class = 'properties__block'>
+        <img src = "assets/house.jpg" class = 'image'>
+        <span class = 'properties__price'> $<%= property.price %> </span>
+      </div>
+      <div class = 'properties__address'>
+        <%= property.address %>
+      </div>
+    <% end %>
+  <% end %>
+
+
+</div>
+
+<!-- <table>
   <thead>
     <tr>
       <th>Seller</th>
@@ -30,8 +51,4 @@
       </tr>
     <% end %>
   </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Property', new_property_path %>
+</table> -->
