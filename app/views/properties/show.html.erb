@@ -1,6 +1,36 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+
+<div class = 'wrapper--horizontal'>
+  <div class = 'wrapper--vertical'>
+    <div class = 'properties__block properties__block--large'>
+      <img src = "/assets/house.jpg" class = 'image image--large'>
+    </div>
+
+    <div class = 'property__address'>
+      <%= @property.address %>
+    </div>
+  </div>
+
+  <div class = 'wrapper--vertical'>
+    <p>Time remaining:</p>
+    <div class = 'bright-text'>
+      <%= @property.time_open %> hours
+    </div>
+
+    <p>Current Offer:</p>
+    <div class = 'bright-text'>
+      $100,000
+    </div>
+
+    <button class = 'btn btn--offer'>
+      Make an Offer
+    </button>
+  </div>
+</div>
+
+
+<!-- <p>
   <strong>Seller:</strong>
   <%= @property.seller %>
 </p>
@@ -28,7 +58,4 @@
 <p>
   <strong>Time open:</strong>
   <%= @property.time_open %>
-</p>
-
-<%= link_to 'Edit', edit_property_path(@property) %> |
-<%= link_to 'Back', properties_path %>
+</p> -->

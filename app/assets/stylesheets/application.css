@@ -76,11 +76,6 @@ body {
   line-height: 18px;
 }
 
-p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
-}
 
 pre {
   background-color: #C5C1C0;
@@ -170,6 +165,13 @@ img {
   margin-bottom: auto;
 }
 
+.image--large {
+  width: 600px;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 
 /*------------------------------------*\
 #wrapper
@@ -177,6 +179,17 @@ img {
 
 .wrapper {
   margin: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper--horizontal {
+  display: flex;
+}
+
+.wrapper--vertical {
+  display: flex;
+  flex-direction: column;
 }
 
 
@@ -221,6 +234,12 @@ img {
   width: 150px;
   padding: 4px;
   border-radius: 5px;
+}
+
+.btn--offer {
+  background-color: #1A2930;
+  color: white;
+  margin-top: 20px;
 }
 
 
@@ -296,6 +315,12 @@ img {
   border-radius: 10px;
 }
 
+.properties__block--large {
+  margin-top: 0;
+  width: 600px;
+  height: 400px;
+}
+
 .properties__address {
   margin-top: 0;
   padding-top: 20px;
@@ -311,7 +336,15 @@ img {
   position: absolute;
 }
 
+/*------------------------------------*\
+# bright-text
+\*------------------------------------*/
 
+.bright-text {
+  font-size: 2em;
+  color: #1A2930;
+  margin-bottom: 40px;
+}
 
 
 
