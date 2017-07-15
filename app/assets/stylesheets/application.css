@@ -158,8 +158,8 @@ img {
 }
 
 .image__logo {
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   margin-left: 100px;
   margin-top: auto;
   margin-bottom: auto;
@@ -179,6 +179,7 @@ img {
 
 .wrapper {
   margin: 100px;
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
 }
@@ -241,6 +242,37 @@ img {
   color: white;
   margin-top: 20px;
 }
+
+.btn--property {
+  margin-left: 100px;
+  margin-top: auto;
+  margin-bottom: 15px;
+}
+
+
+/*------------------------------------*\
+ #search
+\*------------------------------------*/
+
+.search {
+  height: 60px;
+  margin-top: 60px;
+}
+
+.search__input {
+  font-size: 1.2em;
+  height: 30px;
+  width: 400px;
+  padding: 10px;
+}
+
+.search__btn {
+  height: 20px;
+  margin: auto;
+  margin-left: 10px;
+  width: 80px;
+}
+
 
 
 
