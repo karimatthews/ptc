@@ -65,6 +65,13 @@
   </table>
 <% end %>
 
+<div class = 'wrapper--horizontal min-price'>
+  <span>
+    $<%= number_with_delimiter(@property.price) %>:
+    minimum price the seller will accept
+  </span>
+</div>
+
 <!-- <p>
   <strong>Seller:</strong>
   <%= @property.seller %>

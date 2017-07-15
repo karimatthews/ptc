@@ -164,6 +164,15 @@ table {
     width: fit-content;
   }
 
+  .min-price {
+    border: 1px solid #0A1612;
+    padding: 15px;
+    text-align: center;
+    background-color: #1A2930;
+    color: #f4f4f4;
+    width: fit-content;
+  }
+
 
 /*------------------------------------*\
 # image
