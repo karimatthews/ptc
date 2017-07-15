@@ -30,6 +30,38 @@
 </div>
 
 
+<br><br><br><br>
+
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Buyer</th>
+      <th>Submit time</th>
+      <th>Amount</th>
+      <th>Deposit percent</th>
+      <th>Terms</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @property.bids.each do |bid| %>
+      <tr>
+        <td><%= bid.buyer %></td>
+        <td><%= bid.submit_time %></td>
+        <td><%= bid.amount %></td>
+        <td><%= bid.deposit_percent %></td>
+        <td><%= bid.terms %></td>
+        <td><%= link_to 'Show', bid %></td>
+        <td><%= link_to 'Edit', edit_bid_path(bid) %></td>
+        <td><%= link_to 'Destroy', bid, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
 <!-- <p>
   <strong>Seller:</strong>
   <%= @property.seller %>
