@@ -1,0 +1,34 @@
+<div class = 'form'>
+  <%= form_tag(controller: "properties", action: "add_bid", method: "post") do  %>
+
+    <div class="field">
+      <%= label_tag  :buyer %>
+      <%= text_field :bid, :buyer  %>
+    </div>
+
+    <div class="field">
+      <%= label_tag :submit_time %>
+      <%= datetime_select :bid, :submit_time %>
+    </div>
+
+    <div class="field">
+      <%= label_tag :amount %>
+      <%= number_field :bid, :amount%>
+    </div>
+
+    <div class="field">
+      <%= label_tag :deposit_percent %>
+      <%= number_field :bid, :deposit_percent %>
+    </div>
+
+    <div class="field">
+      <%= label_tag :terms %>
+      <%= text_field :bid, :terms %>
+    </div>
+
+    <div class="actions">
+      <%= submit_tag %>
+    </div>
+
+  <% end %>
+</div>

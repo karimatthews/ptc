@@ -1,5 +1,5 @@
 class PropertiesController < ApplicationController
-  before_action :set_property, only: [:show, :edit, :update, :destroy]
+  before_action :set_property, only: [:show, :edit, :update, :destroy, :add_bid, :new_bid]
 
   # GET /properties
   # GET /properties.json
@@ -10,6 +10,17 @@ class PropertiesController < ApplicationController
   # GET /properties/1
   # GET /properties/1.json
   def show
+  end
+
+  def new_bid
+  end
+
+  def add_bid
+    bid_params = params.require(:bid).permit(:buyer, :submit_time, :amount, :deposit_percent, :terms)
+    # @property.bids.create(buyer: bid_params['buyer'], amount: bid_params['amount'], )
+    @property.bids.create(bid_params)
+
+    redirect_to @property, notice: "Successfully added your bid!"
   end
 
   # GET /properties/new
