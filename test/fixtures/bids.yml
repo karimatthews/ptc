@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  buyer: MyString
+  submit_time: 2017-07-15 10:58:51
+  amount: 1
+  deposit_percent: 1
+  terms: MyString
+
+two:
+  buyer: MyString
+  submit_time: 2017-07-15 10:58:51
+  amount: 1
+  deposit_percent: 1
+  terms: MyString
