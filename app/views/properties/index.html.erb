@@ -1,17 +1,19 @@
 <p id="notice"><%= notice %></p>
 
 <div class = 'wrapper--horizontal'>
-  <h1>Properties</h1>
+  <h1 class = 'heading'>Properties</h1>
 
   <button class = 'btn btn--property'>
     <%= link_to 'New Property', new_property_path %>
   </button>
+
+  <div class = 'wrapper--horizontal search'>
+    <input type = 'text' placeholder = 'Search properties ...' class = 'search__input'>
+    <!-- <button class = 'search__btn'> Go </button> -->
+  </div>
 </div>
 
-<div class = 'wrapper--horizontal search'>
-  <input type = 'text' placeholder = 'Search properties ...' class = 'search__input'>
-  <!-- <button class = 'search__btn'> Go </button> -->
-</div>
+
 
 
 <div class = 'properties'>

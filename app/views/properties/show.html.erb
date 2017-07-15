@@ -36,30 +36,34 @@
 <br><br><br><br>
 
 
+<!-- Only show bid history once there are bids -->
+<% if @property.bids.present? %>
+  <h2> Offer History: </h2>
 
-<table>
-  <thead>
-    <tr>
-      <th>Amount</th>
-      <th>Submit time</th>
-      <th>Deposit %</th>
-      <th>Terms</th>
-
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @property.bids.each do |bid| %>
+  <table>
+    <thead>
       <tr>
-        <td><%= bid.amount %></td>
-        <td><%= bid.submit_time %></td>
-        <td><%= bid.deposit_percent %> %</td>
-        <td><%= bid.terms %></td>
+        <th>Amount</th>
+        <th>Submit time</th>
+        <th>Deposit %</th>
+        <th>Terms</th>
 
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+
+    <tbody>
+      <% @property.bids.each do |bid| %>
+        <tr>
+          <td>$<%= number_with_delimiter(bid.amount) %></td>
+          <td><%= bid.submit_time.strftime("%A %e %B %l:%M%P ")  %></td>
+          <td><%= bid.deposit_percent %>%</td>
+          <td><%= bid.terms %></td>
+
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>
 
 <!-- <p>
   <strong>Seller:</strong>
