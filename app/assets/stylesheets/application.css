@@ -152,9 +152,8 @@ img {
 \*------------------------------------*/
 
 .image {
-  width: 300px;
-  height: 150px;
-  z-index: 11;
+  width: 360px;
+  height: 230px;;
 }
 
 .image__logo {
@@ -337,11 +336,11 @@ img {
 
 .properties__block {
   display: flex;
-  margin: 60px;
+  margin: 80px;
   margin-left: 0;
   margin-bottom: 0;
   width: 300px;
-  height: 250: none;
+  height: 250px;
   color: white;
   padding: 10px;
   border-radius: 10px;
@@ -354,18 +353,17 @@ img {
 }
 
 .properties__address {
+  font-size: 0.8em;
   margin-top: 0;
   padding-top: 20px;
   padding-left: 10px;
 }
 
 .properties__price {
-  background: none;
-  margin-right: 10px;
-  margin-top:10px;
-  margin-left: auto;
-  z-index: 10;
-  position: absolute;
+  font-size: 1.2em;
+  margin-top: 0;
+  padding-top: 0px;
+  padding-left: 10px;
 }
 
 /*------------------------------------*\

@@ -19,11 +19,16 @@
     <%= link_to property do %>
       <div class = 'properties__block'>
         <img src = "<%= "assets/house#{i}.jpg" %>" class = 'image'>
-        <span class = 'properties__price'> $<%= property.price %> </span>
       </div>
+
+      <div class = 'properties__price'>
+        $ <%= number_with_delimiter(property.price) %>
+      </div>
+
       <div class = 'properties__address'>
         <%= property.address %>
       </div>
+
     <% end %>
   <% end %>
 
