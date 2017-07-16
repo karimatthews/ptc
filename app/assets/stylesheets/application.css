@@ -245,14 +245,6 @@ table {
   height: 230px;;
 }
 
-.image__logo {
-  width: 40px;
-  height: 40px;
-  margin-left: 150px;
-  margin-top: auto;
-  margin-bottom: auto;
-}
-
 .image--large {
   width: 600px;
   height: 400px;
@@ -307,9 +299,35 @@ table {
   color: white;
   margin-top: auto;
   margin-bottom: auto;
-  margin-left: 100px;
+  margin-left: 40px;
+  margin-right: 40px;
   font-size: 1.2em;
 }
+
+.navbar__login {
+  margin-right: 171px;
+  /*margin-left: 40px;*/
+}
+
+.navbar__img{
+  width: 40px;
+  height: 40px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.navbar__img--profile{
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.navbar__img--logo{
+  margin-left: 150px;
+  margin-right: auto;
+}
+
+
+
 
 
 

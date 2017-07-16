@@ -2,14 +2,22 @@
 <!-- Topbar View  -->
 
 
-<div class ='navbar'>
-  <img src = "/assets/logo.svg" class = 'image__logo'>
+<div class ='navbar '>
+  <img src = "/assets/logo.svg" class = ' navbar__tab navbar__img navbar__img--logo'>
+  
   <div class = 'navbar__tab'>
     <%= link_to 'Properties', '/properties' %>
   </div>
 
   <div class = 'navbar__tab'>
     <%= link_to 'New Property', '/properties/new' %>
+  </div>
+
+  <div class = 'navbar__tab navbar__login'>
+    <img src = '/assets/profile.jpg' class = 'navbar__img navbar__img--profile'>
+    <%=  'Gillian' %>
+    |
+    <%= 'Logout' %>
   </div>
 
 
