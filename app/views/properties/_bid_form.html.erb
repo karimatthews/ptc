@@ -1,9 +1,9 @@
-<div class = 'form'>
+<div class = 'form form-group'>
   <%= form_tag(controller: "properties", action: "add_bid", method: "post") do  %>
 
     <div class="field">
-      <%= label_tag  :buyer %>
-      <%= text_field :bid, :buyer  %>
+      <%= label_tag :buyer%>
+      <%= text_field( :bid, :buyer, style: 'margin-bottom: 20px;' ) %>
     </div>
 
     <div class="field">
@@ -13,17 +13,17 @@
 
     <div class="field">
       <%= label_tag :amount %>
-      <%= number_field :bid, :amount%>
+      <%= number_field( :bid, :amount, style: 'margin-bottom: 20px;' )%>
     </div>
 
     <div class="field">
       <%= label_tag :deposit_percent %>
-      <%= number_field :bid, :deposit_percent %>
+      <%= number_field( :bid, :deposit_percent, style: 'margin-bottom: 20px;' ) %>
     </div>
 
     <div class="field">
       <%= label_tag :terms %>
-      <%= text_field :bid, :terms %>
+      <%= text_field( :bid, :terms, style: 'margin-bottom: 20px;' ) %>
     </div>
 
     <div class="actions">
