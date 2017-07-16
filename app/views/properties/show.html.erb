@@ -55,9 +55,11 @@
     <thead>
       <tr>
         <th>Amount</th>
-        <th>Submit time</th>
+        <th>Offer Submitted</th>
         <th>Deposit %</th>
+        <th>Deposit Amount</th>
         <th>Terms</th>
+        <th>Offer Status</th>
 
       </tr>
     </thead>
@@ -68,8 +70,9 @@
           <td>$<%= number_with_delimiter(bid.amount) %></td>
           <td><%= bid.updated_at.strftime("%A %e %B %l:%M%P ")  %></td>
           <td><%= bid.deposit_percent %>%</td>
+          <td>$<%= number_with_delimiter(bid.deposit_percent * bid.amount  / 100)%> </td>
           <td><%= bid.terms %></td>
-
+          <td id = "offer-status">Rejected</td>
         </tr>
       <% end %>
     </tbody>
@@ -82,6 +85,15 @@
     minimum price the seller will accept
   </span>
 </div>
+
+
+<!-- Scripts  -->
+
+<script>
+  cell = document.getElementById("offer-status")
+  cell.innerHTML = 'Pending'
+</script>
+
 
 <script>
   // Set the date we're counting down to
@@ -127,8 +139,8 @@
   // imgs and captions must contain the same number of elements exactly
   var imgs = [
     locationShim() + "/assets/house0.jpg",
-    locationShim() + "/assets/house1.jpg",
-    locationShim() + "/assets/house2.jpg",
+    locationShim() + "/assets/livingroom.jpg",
+    locationShim() + "/assets/bedroom.jpg"
   ]
 
   var img = document.getElementById("image");

@@ -178,14 +178,14 @@ table {
 
   .arrow {
     height: 100px;
-    width: 70px;
+    width: 100px;
     font-size: 100px;
     background-color: #DFDBDA;
     color: #373737;
     border: none;
     font-weight: bold;
     cursor: pointer;
-    margin-top: 120px;
+    margin-top: 130px;
     margin-bottom: auto;
   }
 
