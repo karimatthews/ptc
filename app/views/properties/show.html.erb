@@ -29,7 +29,7 @@
 
     <p>Current Offer:</p>
     <div class = 'bright-text'>
-      $800,000
+      $<%= number_with_delimiter(@property.bids.last.amount) %>
     </div>
 
     <%= link_to "/properties/#{@property.id}/new_bid" do %>
@@ -61,7 +61,7 @@
     </thead>
 
     <tbody>
-      <% @property.bids.each do |bid| %>
+      <% @property.bids.reverse_each do |bid| %>
         <tr>
           <td>$<%= number_with_delimiter(bid.amount) %></td>
           <td><%= bid.updated_at.strftime("%A %e %B %l:%M%P ")  %></td>
