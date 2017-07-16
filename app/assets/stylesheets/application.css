@@ -248,7 +248,7 @@ table {
 .image__logo {
   width: 40px;
   height: 40px;
-  margin-left: 100px;
+  margin-left: 150px;
   margin-top: auto;
   margin-bottom: auto;
 }
@@ -300,6 +300,7 @@ table {
   height: 60px;
   margin: 0;
   box-shadow: 4px 4px 6px black;
+  border-radius: 0;
 }
 
 .navbar__tab {
@@ -352,15 +353,15 @@ table {
 \*------------------------------------*/
 
 .search {
-  margin-left: auto;
+  margin-left: 0;
   margin-right: 80px;
   height: 60px;
 }
 
 .search__input {
   font-size: 1.2em;
-  height: 30px;
-  width: 400px;
+  height: 60px;
+  width: 1000px;
   padding-left: 10px;
   margin-top: auto;
   margin-bottom: 9px;
