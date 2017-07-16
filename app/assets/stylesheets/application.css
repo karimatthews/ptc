@@ -361,7 +361,7 @@ table {
 .search__input {
   font-size: 1.2em;
   height: 60px;
-  width: 1000px;
+  width: 1121px;
   padding-left: 10px;
   margin-top: auto;
   margin-bottom: 9px;
@@ -435,7 +435,7 @@ table {
   display: flex;
   flex-wrap: wrap;
   padding: 0;
-  width: 100%;
+  width: 1200px;
 }
 
 .properties__block {
