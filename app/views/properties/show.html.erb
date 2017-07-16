@@ -3,11 +3,21 @@
 
 <div class = 'wrapper--horizontal'>
   <div class = 'wrapper--vertical'>
-    <div class = 'properties__block properties__block--large'>
-      <img src = "<%= "/assets/house#{@property.id - 1}.jpg" %>" class = 'image image--large'>
+
+    <div id="slideshow" class = 'properties__block properties__block--large'>
+      <button id='left' class = 'arrow' onclick="lastImage()" > < </button>
+        <div class = 'image-container'>
+          <div class = 'inner-image-container'>
+            <img alt="slideshow" id="image"/>
+          </div>
+          <div id = 'caption'>
+          </div>
+        </div>
+      <button id='right' class = 'arrow' onclick="nextImage()" > > </button>
+
     </div>
 
-    <div class = 'property__address'>
+    <div class = 'property__address caption'>
       <%= @property.address %>
     </div>
   </div>
@@ -20,7 +30,7 @@
 
     <p>Current Offer:</p>
     <div class = 'bright-text'>
-      $100,000
+      $800,000
     </div>
 
     <%= link_to "/properties/#{@property.id}/new_bid" do %>
@@ -72,32 +82,57 @@
   </span>
 </div>
 
-<!-- <p>
-  <strong>Seller:</strong>
-  <%= @property.seller %>
-</p>
 
-<p>
-  <strong>Price:</strong>
-  <%= @property.price %>
-</p>
+<script>
 
-<p>
-  <strong>Settlement period:</strong>
-  <%= @property.settlement_period %>
-</p>
+  // This is here so that elements of img list work locally
+  function locationShim() {
+    return "<%= request.base_url %>"
+    // return document.location.href.replace("index.html", "")
+  }
 
-<p>
-  <strong>Min deposit percent:</strong>
-  <%= @property.min_deposit_percent %>
-</p>
+  // Code for changing images
+  // imgs and captions must contain the same number of elements exactly
+  var imgs = [
+    locationShim() + "/assets/house0.jpg",
+    locationShim() + "/assets/house1.jpg",
+    locationShim() + "/assets/house2.jpg",
+  ]
 
-<p>
-  <strong>Address:</strong>
-  <%= @property.address %>
-</p>
+  var img = document.getElementById("image");
+  img.src = imgs[0];
 
-<p>
-  <strong>Time open:</strong>
-  <%= @property.time_open %>
-</p> -->
+
+  function showButtons(){
+    if (imgs.indexOf(img.src) == 0) {
+       document.getElementById('left').style.visibility = 'hidden';
+       document.getElementById('right').style.visibility = 'visible';
+    } else if (imgs.indexOf(img.src) == imgs.length - 1) {
+      document.getElementById('right').style.visibility = 'hidden';
+      document.getElementById('left').style.visibility = 'visible';
+    } else {
+      document.getElementById('right').style.visibility = 'visible';
+      document.getElementById('left').style.visibility = 'visible';
+    }
+  }
+
+  showButtons();
+
+  function nextImage() {
+    // If we reached the end
+    if (imgs.indexOf(img.src) < imgs.length - 1) {
+      // Show next image and next caption
+      img.src = imgs[imgs.indexOf(img.src) + 1];
+    }
+    showButtons();
+  }
+
+  function lastImage() {
+    // If we've moved past the first image
+    if (imgs.indexOf(img.src) > 0) {
+      // Show the previous image and caption
+      img.src = imgs[imgs.indexOf(img.src) - 1];
+    }
+    showButtons();
+  }
+</script>
