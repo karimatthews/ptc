@@ -1,14 +1,14 @@
 <p id="notice"><%= notice %></p>
 
 <div class = 'wrapper--horizontal'>
-  <h1 class = 'heading'>Properties</h1>
-
+  <!-- <h1 class = 'heading'>Properties</h1> -->
+<!--
   <button class = 'btn btn--property'>
     <%= link_to 'New Property', new_property_path %>
-  </button>
+  </button> -->
 
   <div class = 'wrapper--horizontal search'>
-    <input type = 'text' placeholder = 'Search properties ...' class = 'search__input'>
+    <input type = 'text' placeholder = 'Search by suburb or postcode' class = 'search__input'>
     <!-- <button class = 'search__btn'> Go </button> -->
   </div>
 </div>
@@ -20,7 +20,7 @@
   <% @properties.each_with_index do |property, i| %>
     <%= link_to property do %>
       <div class = 'properties__block'>
-        <img src = "<%= "assets/house#{i}.jpg" %>" class = 'image'>
+        <%= image_tag "house#{i}.jpg", class: 'image' %>
       </div>
 
       <div class = 'properties__price'>

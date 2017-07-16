@@ -1,4 +1,3 @@
-<p id="notice"><%= notice %></p>
 
 
 <div class = 'wrapper--horizontal'>
@@ -65,7 +64,7 @@
       <% @property.bids.each do |bid| %>
         <tr>
           <td>$<%= number_with_delimiter(bid.amount) %></td>
-          <td><%= bid.submit_time.strftime("%A %e %B %l:%M%P ")  %></td>
+          <td><%= bid.updated_at.strftime("%A %e %B %l:%M%P ")  %></td>
           <td><%= bid.deposit_percent %>%</td>
           <td><%= bid.terms %></td>
 

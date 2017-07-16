@@ -1,33 +1,33 @@
-<div class = 'form form-group'>
+<div class = 'form form-horizontal'>
   <%= form_tag(controller: "properties", action: "add_bid", method: "post") do  %>
 
-    <div class="field">
+    <div class="field form-group">
       <%= label_tag :buyer%>
-      <%= text_field( :bid, :buyer, style: 'margin-bottom: 20px;' ) %>
+      <%= text_field( :bid, :buyer, style: 'margin-bottom: 20px;', class: 'form-control', value: 'Robert'  ) %>
     </div>
 
-    <div class="field">
+    <!-- <div class="field form-group">
       <%= label_tag :submit_time %>
-      <%= datetime_select :bid, :submit_time %>
-    </div>
+      <%= text_field( :bid, :submit_time, class: 'datepicker') %>
+    </div> -->
 
-    <div class="field">
+    <div class="field form-group">
       <%= label_tag :amount %>
-      <%= number_field( :bid, :amount, style: 'margin-bottom: 20px;' )%>
+      <%= number_field( :bid, :amount, style: 'margin-bottom: 20px;', class: 'form-control')%>
     </div>
 
-    <div class="field">
+    <div class="field form-group">
       <%= label_tag :deposit_percent %>
-      <%= number_field( :bid, :deposit_percent, style: 'margin-bottom: 20px;' ) %>
+      <%= number_field( :bid, :deposit_percent, style: 'margin-bottom: 20px;', class: 'form-control', value: 10 ) %>
     </div>
 
-    <div class="field">
+    <div class="field form-group">
       <%= label_tag :terms %>
-      <%= text_field( :bid, :terms, style: 'margin-bottom: 20px;' ) %>
+      <%= text_field( :bid, :terms, style: 'margin-bottom: 20px;', class: 'form-control', value: '...' ) %>
     </div>
 
-    <div class="actions">
-      <%= submit_tag %>
+    <div class="actions ">
+      <%= submit_tag nil, class: 'btn btn-default'%>
     </div>
 
   <% end %>
