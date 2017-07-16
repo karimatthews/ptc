@@ -27,10 +27,12 @@
       <div id="countdown"></div>
     </div>
 
-    <p>Current Offer:</p>
-    <div class = 'bright-text'>
-      $<%= number_with_delimiter(@property.bids.last.amount) %>
-    </div>
+    <% if @property.bids.present? %>
+      <p>Current Offer:</p>
+      <div class = 'bright-text'>
+        $<%= number_with_delimiter(@property.bids.last.amount) %>
+      </div>
+    <% end %>
 
     <%= link_to "/properties/#{@property.id}/new_bid" do %>
 
