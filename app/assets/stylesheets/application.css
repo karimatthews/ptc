@@ -392,6 +392,19 @@ table {
   width: 80px;
 }
 
+input#search{
+ background-image: url("search.svg");
+ background-repeat: no-repeat;
+ background-size: contain;
+ text-indent: 40px;
+ margin:10px;
+ border: 20px solid white;
+}
+
+/*input#search:focus{
+ background-image:none;
+}*/
+
 
 
 
