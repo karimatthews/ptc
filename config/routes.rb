@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  root to: "pages#main"
+
   get '/properties/:id/new_bid', to: 'properties#new_bid'
   post "/properties/:id/add_bid", to: 'properties#add_bid'
 
