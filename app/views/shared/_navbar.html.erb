@@ -3,8 +3,13 @@
 
 
 <div class ='navbar '>
-  <img src = "/assets/logo.svg" class = ' navbar__tab navbar__img navbar__img--logo'>
-  
+
+  <div class = ' navbar__tab navbar__img navbar__img--logo'>
+    <%= link_to '/' do %>
+      <img src = "/assets/logo.svg" >
+    <% end %>
+  </div>
+
   <div class = 'navbar__tab'>
     <%= link_to 'Properties', '/properties' %>
   </div>
@@ -19,7 +24,5 @@
     |
     <%= 'Logout' %>
   </div>
-
-
 
 </div>
