@@ -2,10 +2,10 @@
 
 This rails app was created at the 2017 [Melbourne SheHacks Event](http://girlgeekacademy.com/shehacks/).
 
-##Usage
+## Usage
 
 PTC is deployed with Heroku at https://thawing-springs-21326.herokuapp.com/properties.
 
-##Technology
+## Technology
 
 PTC has a Rails and Postgres backend.
