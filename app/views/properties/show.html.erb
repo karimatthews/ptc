@@ -36,7 +36,7 @@
 
     <%= link_to "/properties/#{@property.id}/new_bid" do %>
 
-      <button class = 'btn btn--offer'>
+      <button class = 'btn btn--offer' >
         Make an Offer
       </button>
     <% end %>
@@ -96,8 +96,9 @@
 
 
 <script>
-  // Set the date we're counting down to
-  var countDownDate = new Date("Jan 5, 2018 15:37:25").getTime();
+
+  //set the date to count down to
+  var countDownDate = new Date().getTime() + <%= @property.time_open %> * 3600 * 1000
 
   // Update the count down every 1 second
   var x = setInterval(function() {
@@ -114,7 +115,7 @@
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    // Display the result in the element with id="demo"
+    // Display the result in the element with id="countdown"
     document.getElementById("countdown").innerHTML = hours + "h "
    + minutes + "m " + seconds + "s ";
 
