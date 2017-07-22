@@ -1,24 +1,11 @@
-# README
+# Property Trust Centre
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This rails app was created at the 2017 [Melbourne SheHacks Event](http://girlgeekacademy.com/shehacks/).
 
-Things you may want to cover:
+##Usage
 
-* Ruby version
+PTC is deployed with Heroku at https://thawing-springs-21326.herokuapp.com/properties.
 
-* System dependencies
+##Technology
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+PTC has a Rails and Postgres backend.
