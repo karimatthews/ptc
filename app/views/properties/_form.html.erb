@@ -28,9 +28,9 @@
 
     <div class="field form-group">
       <%= form.label :settlement_period, class: 'form__label' %>
-      <div class="input-group" style = 'width: 200px; margin-bottom: 20px;'>
+      <div class="input-group" style = 'width: 150px; margin-bottom: 20px;'>
         <%= form.number_field :settlement_period, id: :property_settlement_period,
-        class: 'form-control', required: 'true', max: '52', min: '0' %>
+        class: 'form-control', required: 'true', max: '52', min: '0', value: '8' %>
         <span class="input-group-addon">weeks</span>
       </div>
     </div>
@@ -40,7 +40,7 @@
       <div class ='right-inner-addon' style = 'margin-bottom: 20px; width: 80px;'>
         <span>%</span>
         <%= form.number_field :min_deposit_percent, id: :property_min_deposit_percent,
-         class: 'form-control', required: 'true', max: '100', min: '5' %>
+         class: 'form-control', required: 'true', max: '100', min: '5', value: '10' %>
       </div>
     </div>
 
@@ -51,7 +51,7 @@
 
     <div class="field form-group">
       <%= form.label :time_open, class: 'form__label' %>
-      <div class="input-group" style = 'width: 200px; margin-bottom: 20px;'>
+      <div class="input-group" style = 'width: 150px; margin-bottom: 20px;'>
         <%= form.number_field :time_open, id: :property_time_open,
          class: 'form-control', required: 'true', min: 12, max: 1000, value: 48 %>
         <span class="input-group-addon">hours</span>
