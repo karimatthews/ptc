@@ -22,12 +22,13 @@
   </div>
 
   <div class = 'wrapper--vertical'>
-    <p>Time remaining:</p>
-    <div class = 'bright-text'>
-      <div id="countdown"></div>
-    </div>
-
     <% if @property.bids.present? %>
+
+      <p>Time remaining:</p>
+      <div class = 'bright-text'>
+        <div id="countdown"></div>
+      </div>
+
       <p>Current Offer:</p>
       <div class = 'bright-text'>
         $<%= number_with_delimiter(@property.bids.last.amount) %>
@@ -36,7 +37,7 @@
 
     <%= link_to "/properties/#{@property.id}/new_bid" do %>
 
-      <button class = 'btn btn--offer' >
+      <button class = 'btn btn--offer' onclcik="updateTime" >
         Make an Offer
       </button>
     <% end %>
@@ -97,8 +98,11 @@
 
 <script>
 
-  //set the date to count down to
-  var countDownDate = new Date().getTime() + <%= @property.time_open %> * 3600 * 1000
+  countDownDate = new Date().getTime() + <%= @property.time_open %> * 3600 * 1000
+
+  function updateTime() {
+    countDownDate = new Date().getTime() + <%= @property.time_open %> * 3600 * 1000
+  }
 
   // Update the count down every 1 second
   var x = setInterval(function() {
