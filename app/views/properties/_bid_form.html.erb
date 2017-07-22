@@ -3,7 +3,7 @@
 
     <div class="field form-group">
       <%= label_tag :buyer%>
-      <%= text_field( :bid, :buyer, style: 'margin-bottom: 20px;', class: 'form-control', value: 'Robert'  ) %>
+      <%= text_field( :bid, :buyer, style: 'margin-bottom: 20px;', class: 'form-control', required: 'true'  ) %>
     </div>
 
     <!-- <div class="field form-group">
@@ -11,23 +11,29 @@
       <%= text_field( :bid, :submit_time, class: 'datepicker') %>
     </div> -->
 
-    <div class="field form-group">
+    <div class="field form-group ">
       <%= label_tag :amount %>
-      <%= number_field( :bid, :amount, style: 'margin-bottom: 20px;', class: 'form-control')%>
+      <div class="left-inner-addon" style = 'margin-bottom: 20px; width: 200px;'>
+        <span>$</span>
+        <%= number_field( :bid, :amount,  required: 'true', class: 'form-control')%>
+      </div>
     </div>
 
     <div class="field form-group">
       <%= label_tag :deposit_percent %>
-      <%= number_field( :bid, :deposit_percent, style: 'margin-bottom: 20px;', class: 'form-control', value: 10 ) %>
+      <div class ='right-inner-addon' style = 'margin-bottom: 20px; width: 80px;'>
+        <span>%</span>
+        <%= number_field( :bid, :deposit_percent, class: 'form-control', value: 10, required: 'true' ) %>
+      </div>
     </div>
 
     <div class="field form-group">
       <%= label_tag :terms %>
-      <%= text_field( :bid, :terms, style: 'margin-bottom: 20px;', class: 'form-control', value: '...' ) %>
+      <%= text_area( :bid, :terms, style: 'margin-bottom: 20px;', class: 'form-control', value: '...' ) %>
     </div>
 
-    <div class="actions ">
-      <%= submit_tag nil, class: 'btn btn-default'%>
+    <div class="actions form-group">
+      <%= submit_tag nil, class: 'btn btn-default form-control'%>
     </div>
 
   <% end %>

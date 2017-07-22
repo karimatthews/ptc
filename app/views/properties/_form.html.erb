@@ -1,47 +1,50 @@
-<%= form_with(model: property, local: true) do |form| %>
-  <% if property.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(property.errors.count, "error") %> prohibited this property from being saved:</h2>
 
-      <ul>
-      <% property.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+<div class = 'form form-horizontal'>
+  <%= form_with(model: property, local: true) do |form| %>
+    <% if property.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(property.errors.count, "error") %> prohibited this property from being saved:</h2>
+
+        <ul>
+        <% property.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field form-group">
+      <%= form.label :seller, class: 'form__label'%>
+      <%= form.text_field :seller, id: :property_seller, style: 'margin-bottom: 20px;', class: 'form-control', required: 'true' %>
+    </div>
+
+    <div class="field form-group">
+      <%= form.label :price, class: 'form__label'%>
+      <%= form.number_field :price, id: :property_price, style: 'margin-bottom: 20px;', class: 'form-control', required: 'true' %>
+    </div>
+
+    <div class="field form-group">
+      <%= form.label :settlement_period, class: 'form__label' %>
+      <%= form.number_field :settlement_period, id: :property_settlement_period, style: 'margin-bottom: 20px;', class: 'form-control', required: 'true' %>
+    </div>
+
+    <div class="field form-group">
+      <%= form.label :min_deposit_percent, class: 'form__label' %>
+      <%= form.number_field :min_deposit_percent, id: :property_min_deposit_percent, style: 'margin-bottom: 20px;', class: 'form-control', required: 'true' %>
+    </div>
+
+    <div class="field form-group">
+      <%= form.label :address, class: 'form__label' %>
+      <%= form.text_field :address, id: :property_address, style: 'margin-bottom: 20px;', class: 'form-control', required: 'true' %>
+    </div>
+
+    <div class="field form-group">
+      <%= form.label :time_open, class: 'form__label' %>
+      <%= form.number_field :time_open, id: :property_time_open, style: 'margin-bottom: 20px;', class: 'form-control', required: 'true' %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit %>
     </div>
   <% end %>
-
-  <div class="form__field">
-    <%= form.label :seller, class: 'form__label'%>
-    <%= form.text_field :seller, id: :property_seller %>
-  </div>
-
-  <div class="form__field">
-    <%= form.label :price, class: 'form__label'%>
-    <%= form.number_field :price, id: :property_price %>
-  </div>
-
-  <div class="form__field">
-    <%= form.label :settlement_period, class: 'form__label' %>
-    <%= form.number_field :settlement_period, id: :property_settlement_period %>
-  </div>
-
-  <div class="form__field">
-    <%= form.label :min_deposit_percent, class: 'form__label' %>
-    <%= form.number_field :min_deposit_percent, id: :property_min_deposit_percent %>
-  </div>
-
-  <div class="form__field">
-    <%= form.label :address, class: 'form__label' %>
-    <%= form.text_field :address, id: :property_address %>
-  </div>
-
-  <div class="form__field">
-    <%= form.label :time_open, class: 'form__label' %>
-    <%= form.number_field :time_open, id: :property_time_open %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+</div>

@@ -235,6 +235,10 @@ table {
    color: #373737;
  }
 
+ .actions {
+   margin-left: 0;
+ }
+
 
 /*------------------------------------*\
 # image
@@ -417,7 +421,7 @@ input#search{
 
 
 .form {
-  width: fit-content;
+  width: 400px;
   padding: 40px;
   padding-left: 0;
   display: flex;
@@ -452,6 +456,56 @@ input#search{
   margin-bottom: 20px;
   font-size: 1.2em;
 }
+
+.input-group-addon
+{
+    background-color:#fff;
+    margin-bottom: 20px;
+    pointer-events: none;
+}
+
+.input-group .input-group-addon + .form-control
+{
+    border-left: none;
+    border-right: none;
+}
+
+.input-group-addon:first-child {
+    border-left: 0px;
+    border-right: 0px;
+}
+
+
+
+.left-inner-addon {
+    position: relative;
+    font-size: 1.2em;
+    color: #555;
+}
+.left-inner-addon input {
+    padding-left: 22px;
+}
+.left-inner-addon span {
+    position: absolute;
+    padding: 7px 12px;
+    pointer-events: none;
+}
+
+.right-inner-addon {
+    position: relative;
+    color: #555;
+}
+.right-inner-addon input {
+    padding-right: 30px;
+}
+.right-inner-addon span {
+    position: absolute;
+    right: 0px;
+    padding: 7px 12px;
+    pointer-events: none;
+}
+
+
 
 
 
