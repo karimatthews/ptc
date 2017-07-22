@@ -20,17 +20,28 @@
 
     <div class="field form-group">
       <%= form.label :price, class: 'form__label'%>
-      <%= form.number_field :price, id: :property_price, style: 'margin-bottom: 20px;', class: 'form-control', required: 'true' %>
+      <div class="left-inner-addon" style = 'margin-bottom: 20px; width: 200px;'>
+        <span>$</span>
+        <%= form.number_field :price, id: :property_price, style: 'margin-bottom: 20px;', class: 'form-control', required: 'true' %>
+      </div>
     </div>
 
     <div class="field form-group">
       <%= form.label :settlement_period, class: 'form__label' %>
-      <%= form.number_field :settlement_period, id: :property_settlement_period, style: 'margin-bottom: 20px;', class: 'form-control', required: 'true' %>
+      <div class="input-group" style = 'width: 200px; margin-bottom: 20px;'>
+        <%= form.number_field :settlement_period, id: :property_settlement_period,
+        class: 'form-control', required: 'true', max: '52', min: '0' %>
+        <span class="input-group-addon">weeks</span>
+      </div>
     </div>
 
     <div class="field form-group">
       <%= form.label :min_deposit_percent, class: 'form__label' %>
-      <%= form.number_field :min_deposit_percent, id: :property_min_deposit_percent, style: 'margin-bottom: 20px;', class: 'form-control', required: 'true' %>
+      <div class ='right-inner-addon' style = 'margin-bottom: 20px; width: 80px;'>
+        <span>%</span>
+        <%= form.number_field :min_deposit_percent, id: :property_min_deposit_percent,
+         class: 'form-control', required: 'true', max: '100', min: '5' %>
+      </div>
     </div>
 
     <div class="field form-group">
@@ -40,11 +51,14 @@
 
     <div class="field form-group">
       <%= form.label :time_open, class: 'form__label' %>
-      <%= form.number_field :time_open, id: :property_time_open, style: 'margin-bottom: 20px;', class: 'form-control', required: 'true' %>
+      <div class="input-group" style = 'width: 200px; margin-bottom: 20px;'>
+        <%= form.number_field :time_open, id: :property_time_open,
+         class: 'form-control', required: 'true', min: 12, max: 1000, value: 48 %>
+        <span class="input-group-addon">hours</span>
     </div>
 
     <div class="actions">
-      <%= form.submit %>
+      <%= form.submit nil, class: 'btn btn-default form-control', style: 'margin-top:20px;'%>
     </div>
   <% end %>
 </div>
