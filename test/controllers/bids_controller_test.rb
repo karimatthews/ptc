@@ -10,18 +10,18 @@ class BidsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should get new" do
-    get new_bid_url
-    assert_response :success
-  end
+  # test "should get new" do
+  #   get new_bid_url
+  #   assert_response :success
+  # end
 
-  test "should create bid" do
-    assert_difference('Bid.count') do
-      post bids_url, params: { bid: { amount: @bid.amount, buyer: @bid.buyer, deposit_percent: @bid.deposit_percent, submit_time: @bid.submit_time, terms: @bid.terms } }
-    end
-
-    assert_redirected_to bid_url(Bid.last)
-  end
+  # test "should create bid" do
+  #   assert_difference('Bid.count') do
+  #     post bids_url, params: { bid: { amount: @bid.amount, buyer: @bid.buyer, deposit_percent: @bid.deposit_percent, submit_time: @bid.submit_time, terms: @bid.terms } }
+  #   end
+  #
+  #   assert_redirected_to bid_url(Bid.last)
+  # end
 
   test "should show bid" do
     get bid_url(@bid)
@@ -33,10 +33,10 @@ class BidsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should update bid" do
-    patch bid_url(@bid), params: { bid: { amount: @bid.amount, buyer: @bid.buyer, deposit_percent: @bid.deposit_percent, submit_time: @bid.submit_time, terms: @bid.terms } }
-    assert_redirected_to bid_url(@bid)
-  end
+  # test "should update bid" do
+  #   patch bid_url(@bid), params: { bid: { amount: @bid.amount, buyer: @bid.buyer, deposit_percent: @bid.deposit_percent, submit_time: @bid.submit_time, terms: @bid.terms } }
+  #   assert_redirected_to bid_url(@bid)
+  # end
 
   test "should destroy bid" do
     assert_difference('Bid.count', -1) do
