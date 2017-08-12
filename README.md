@@ -6,7 +6,7 @@ This rails app was created at the 2017 [Melbourne SheHacks Event](http://girlgee
 
 ## Usage
 
-PTC is deployed with Heroku at https://thawing-springs-21326.herokuapp.com/properties.
+PTC is deployed with Heroku [here](https://property-trust-centre.herokuapp.com).
 
 ## Technology
 
