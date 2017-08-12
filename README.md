@@ -2,7 +2,7 @@
 
 This rails app was created at the 2017 [Melbourne SheHacks Event](http://girlgeekacademy.com/shehacks/).
 
-![screenshot](images/screenshot.png)
+![screenshot](app/assets/images/screenshot.png)
 
 ## Usage
 
